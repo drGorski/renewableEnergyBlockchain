@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp.iml" group="cordapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states.iml" group="cordapp-contracts-states" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_main.iml" group="cordapp-contracts-states" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_test.iml" group="cordapp-contracts-states" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_integrationTest.iml" group="cordapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_main.iml" group="cordapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_test.iml" group="cordapp" />
+      <module fileurl="file://$PROJECT_DIR$/eneryb-bc-iot-poc.iml" filepath="$PROJECT_DIR$/eneryb-bc-iot-poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_integrationTest.iml" group="eneryb-bc-iot-poc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_main.iml" group="eneryb-bc-iot-poc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_test.iml" group="eneryb-bc-iot-poc" />
+    </modules>
+  </component>
+</project>

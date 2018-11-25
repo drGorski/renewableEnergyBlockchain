@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="cordapp-contracts-states_main" target="1.8" />
+      <module name="cordapp-contracts-states_test" target="1.8" />
+      <module name="cordapp_integrationTest" target="1.8" />
+      <module name="cordapp_main" target="1.8" />
+      <module name="cordapp_test" target="1.8" />
+      <module name="eneryb-bc-iot-poc_integrationTest" target="1.8" />
+      <module name="eneryb-bc-iot-poc_main" target="1.8" />
+      <module name="eneryb-bc-iot-poc_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
