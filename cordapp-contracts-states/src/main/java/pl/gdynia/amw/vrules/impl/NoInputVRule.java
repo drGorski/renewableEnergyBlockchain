@@ -1,8 +1,9 @@
-package pl.gdynia.amw;
+package pl.gdynia.amw.vrules.impl;
 
 import net.corda.core.transactions.LedgerTransaction;
+import pl.gdynia.amw.vrules.VRule;
 
-public class Rule1 implements VRule {
+public class NoInputVRule implements VRule {
 
     private static final String ERROR_MSG = "No inputs should be consumed when issuing an IOU.";
 
@@ -12,7 +13,7 @@ public class Rule1 implements VRule {
     }
 
     @Override
-    public String toString() {
+    public String errorMsg() {
         return ERROR_MSG;
     }
 }

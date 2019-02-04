@@ -1,4 +1,4 @@
-package pl.gdynia.amw;
+package pl.gdynia.amw.state;
 
 import com.google.common.collect.ImmutableList;
 import net.corda.core.contracts.ContractState;

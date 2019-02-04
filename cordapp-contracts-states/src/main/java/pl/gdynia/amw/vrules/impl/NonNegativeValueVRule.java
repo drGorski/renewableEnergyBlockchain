@@ -1,9 +1,11 @@
-package pl.gdynia.amw;
+package pl.gdynia.amw.vrules.impl;
 
 import net.corda.core.identity.Party;
 import net.corda.core.transactions.LedgerTransaction;
+import pl.gdynia.amw.state.IOUState;
+import pl.gdynia.amw.vrules.VRule;
 
-public class Rule3 implements VRule {
+public class NonNegativeValueVRule implements VRule {
 
     private static final String ERROR_MSG = "The IOU's value must be non-negative.";
 
@@ -17,7 +19,7 @@ public class Rule3 implements VRule {
     }
 
     @Override
-    public String toString() {
+    public String errorMsg() {
         return ERROR_MSG;
     }
 }

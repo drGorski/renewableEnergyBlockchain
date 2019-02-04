@@ -1,9 +1,11 @@
-package pl.gdynia.amw;
+package pl.gdynia.amw.vrules.impl;
 
 import net.corda.core.identity.Party;
 import net.corda.core.transactions.LedgerTransaction;
+import pl.gdynia.amw.state.IOUState;
+import pl.gdynia.amw.vrules.VRule;
 
-public class Rule4 implements VRule {
+public class DifferentSellerAndBuyerVRuke implements VRule {
 
     private static final String ERROR_MSG = "The producer and the buyer cannot be the same entity.";
 
@@ -17,7 +19,8 @@ public class Rule4 implements VRule {
     }
 
     @Override
-    public String toString() {
+    public String errorMsg() {
         return ERROR_MSG;
     }
+
 }

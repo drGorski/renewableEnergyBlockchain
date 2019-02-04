@@ -5,6 +5,7 @@ import net.corda.core.contracts.ContractState;
 import net.corda.core.flows.*;
 import net.corda.core.transactions.SignedTransaction;
 import net.corda.core.utilities.ProgressTracker;
+import pl.gdynia.amw.state.IOUState;
 
 import static net.corda.core.contracts.ContractsDSL.requireThat;
 

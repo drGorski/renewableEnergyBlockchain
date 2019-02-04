@@ -10,8 +10,7 @@ import net.corda.core.utilities.NetworkHostAndPort;
 import org.apache.activemq.artemis.api.core.ActiveMQException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pl.gdynia.amw.IOUFlow;
-import pl.gdynia.amw.IOUState;
+import pl.gdynia.amw.state.IOUState;
 import rx.Observable;
 
 import java.util.concurrent.ExecutionException;
