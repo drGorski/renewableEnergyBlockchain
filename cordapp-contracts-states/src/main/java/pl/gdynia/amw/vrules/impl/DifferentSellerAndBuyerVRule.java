@@ -5,7 +5,7 @@ import net.corda.core.transactions.LedgerTransaction;
 import pl.gdynia.amw.state.IOUState;
 import pl.gdynia.amw.vrules.VRule;
 
-public class DifferentSellerAndBuyerVRuke implements VRule {
+public class DifferentSellerAndBuyerVRule implements VRule {
 
     private static final String ERROR_MSG = "The producer and the buyer cannot be the same entity.";
 

@@ -17,10 +17,11 @@ public class IOUContract extends VRContract {
     }
 
     public void setRules() {
-        rules = ImmutableList.of(new NoInputVRule(),
+        rules = ImmutableList.of(
+                new NoInputVRule(),
                 new OneOutputVRule(),
                 new NonNegativeValueVRule(),
-                new DifferentSellerAndBuyerVRuke(),
+                new DifferentSellerAndBuyerVRule(),
                 new TwoSignersVRule(),
                 new ProducersAndBuyersAsSignersVRule());
     }
