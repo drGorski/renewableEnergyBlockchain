@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e6586186-7087-4c1c-bbdb-87caeed821d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-java/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-java/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-java/build.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cordapp-example" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cordapp-example" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cordapp-example" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1dVRqENiSglMnGgA5G7vo8WU3aS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.36377025" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Gradle.cordapp-example [jar]">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cordapp-example [configureCordappFatJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="configureCordappFatJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="cordapp-example [deployNodes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="deployNodes" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="cordapp-example [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cordapp-example.clients.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.server.Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Run Example Cordapp - Java" />
+      <item itemvalue="Gradle.Unit tests" />
+      <item itemvalue="JUnit.Run Contract Tests - Java" />
+      <item itemvalue="JUnit.Run Contract Tests - Kotlin" />
+      <item itemvalue="JUnit.Run Flow Tests - Java" />
+      <item itemvalue="JUnit.Run Flow Tests - Kotlin" />
+      <item itemvalue="JUnit.Run Integration Tests - Java" />
+      <item itemvalue="JUnit.Run Integration Tests - Kotlin" />
+      <item itemvalue="Kotlin.Run Example Cordapp - Kotlin" />
+      <item itemvalue="Remote.Debug CorDapp" />
+      <item itemvalue="Spring Boot.Server" />
+      <item itemvalue="Gradle.cordapp-example [deployNodes]" />
+      <item itemvalue="Gradle.cordapp-example [jar]" />
+      <item itemvalue="Gradle.cordapp-example [configureCordappFatJar]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.cordapp-example [jar]" />
+        <item itemvalue="Gradle.cordapp-example [configureCordappFatJar]" />
+        <item itemvalue="Gradle.cordapp-example [deployNodes]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6586186-7087-4c1c-bbdb-87caeed821d7" name="Default Changelist" comment="" />
+      <created>1592508463164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592508463164</updated>
+      <workItem from="1603389224276" duration="2720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="328" y="91" key="#Project_Structure" timestamp="1603390274336">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state x="328" y="91" key="#Project_Structure/0.23.1680.974@0.23.1680.974" timestamp="1603390274336" />
+    <state width="1638" height="263" key="GridCell.Tab.0.bottom" timestamp="1603395781603">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1638" height="263" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1603395781603" />
+    <state width="1720" height="285" key="GridCell.Tab.0.bottom/0.23.1920.974/1920.23.1920.1057@1920.23.1920.1057" timestamp="1596218833266" />
+    <state width="1638" height="263" key="GridCell.Tab.0.center" timestamp="1603395781603">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1638" height="263" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1603395781603" />
+    <state width="1720" height="285" key="GridCell.Tab.0.center/0.23.1920.974/1920.23.1920.1057@1920.23.1920.1057" timestamp="1596218833265" />
+    <state width="1638" height="263" key="GridCell.Tab.0.left" timestamp="1603395781602">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1638" height="263" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1603395781602" />
+    <state width="1720" height="285" key="GridCell.Tab.0.left/0.23.1920.974/1920.23.1920.1057@1920.23.1920.1057" timestamp="1596218833264" />
+    <state width="1638" height="263" key="GridCell.Tab.0.right" timestamp="1603395781603">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1638" height="263" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1603395781603" />
+    <state width="1720" height="285" key="GridCell.Tab.0.right/0.23.1920.974/1920.23.1920.1057@1920.23.1920.1057" timestamp="1596218833265" />
+    <state x="341" y="149" key="SettingsEditor" timestamp="1603389743729">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state x="341" y="149" key="SettingsEditor/0.23.1680.974@0.23.1680.974" timestamp="1603389743729" />
+    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1603394651918">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state x="505" y="237" width="670" height="676" key="search.everywhere.popup/0.23.1680.974@0.23.1680.974" timestamp="1603394651918" />
+  </component>
+</project>

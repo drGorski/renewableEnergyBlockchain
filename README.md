@@ -1,130 +1,60 @@
-![Corda](https://www.corda.net/wp-content/uploads/2016/11/fg005_corda_b.png)
+# CorDapp Samples - Java
+<p align="center">
+  <img src="https://www.corda.net/wp-content/uploads/2016/11/fg005_corda_b.png" alt="Corda" width="500">
+</p>
 
-# CorDapp Template
+## Introduction
+This repository contains multiple sample apps, from CorDapps that help you get started, all the way to demonstrating specific features and advanced usage.
 
-Welcome to the CorDapp template. The CorDapp template is a stubbed-out CorDapp 
-which you can use to bootstrap your own CorDapp projects.
+If you are new to Corda and/or would like to learn all of the fundamentals in a guided and incremental manner please visit the new 
+[Corda Training Site](https://training.corda.net)
 
-**This is the JAVA version of the CorDapp template. For the KOTLIN version click 
-[here](https://github.com/corda/cordapp-template-kotlin/).**
+To get started explore the [Basic](./Basic) folder, or navigate to the [Advanced](./Advanced) and [Features](./Features) folders to see a description of whats available. You can find the exact same set of CorDapp demonstration in Kotlin language at [link](https://github.com/corda/samples-kotlin).
 
-## Pre-Requisites
+## Directories
+The samples are divided into 5 sections with the following desciption:
 
-You will need the following installed on your machine before you can start:
+* [Accounts](./Accounts): These samples showcases how to utilize [Corda Accounts Libray](https://training.corda.net/libraries/accounts-lib/) to build CorDapps which aim to have massive user volume
+* [Advanced](./Advanced): In these samples, we demonstrate more complex and sophisticated [features](https://training.corda.net/corda-details/introduction/) of Corda. 
+* [Basic](./Basic): They demonstrate [fundamental](https://training.corda.net/key-concepts/concepts/) and useful techniques for CorDapp development. 
+* [Features](./Features): These samples demonstrate specific Corda [functionalities](https://training.corda.net/corda-details/introduction/). 
+* [Tokens](./Tokens): These include TokenSDK related samples. Learn more at [TokenSDK](https://training.corda.net/libraries/tokens-sdk/). 
 
-* [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
-  installed and available on your path (Minimum version: 1.8_131).
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (Minimum version 2017.1)
-* git
-* Optional: [h2 web console](http://www.h2database.com/html/download.html)
-  (download the "platform-independent zip")
 
-For more detailed information, see the
-[getting set up](https://docs.corda.net/getting-set-up.html) page on the
-Corda docsite.
 
-## Getting Set Up
-
-To get started, clone this repository with:
-
-     git clone https://github.com/corda/cordapp-template-java.git
-
-And change directories to the newly cloned repo:
-
-     cd cordapp-template-java
-
-## Building the CorDapp template:
-
-**Unix:** 
-
-     ./gradlew deployNodes
-
-**Windows:**
-
-     gradlew.bat deployNodes
-
-Note: You'll need to re-run this build step after making any changes to
-the template for these to take effect on the node.
-
-## Running the Nodes
-
-Once the build finishes, change directories to the folder where the newly
-built nodes are located:
-
-     cd build/nodes
-
-The Gradle build script will have created a folder for each node. You'll
-see three folders, one for each node and a `runnodes` script. You can
-run the nodes with:
-
-**Unix:**
-
-     ./runnodes
-
-**Windows:**
-
-    runnodes.bat
-
-You should now have three Corda nodes running on your machine serving 
-the template.
-
-When the nodes have booted up, you should see a message like the following 
-in the console: 
-
-     Node started up and registered in 5.007 sec
-
-## Interacting with the CorDapp via HTTP
-
-The CorDapp defines a couple of HTTP API end-points and also serves some
-static web content. Initially, these return generic template responses.
-
-The nodes can be found using the following port numbers, defined in the 
-`build.gradle`, as well as the `node.conf` file for each node found
-under `build/nodes/NodeX` or `build/nodes/NodeX`:
-
-     PartyA: localhost:10007
-     PartyB: localhost:10010
-
-As the nodes start up, they should tell you which host and port their
-embedded web server is running on. The API endpoints served are:
-
-     /api/template/templateGetEndpoint
-
-And the static web content is served from:
-
-     /web/template
-
-## Using the Example RPC Client
-
-The `TemplateClient.java` file is a simple utility which uses the client
-RPC library to connect to a node and log its transaction activity.
-It will log any existing states and listen for any future states. To build 
-the client use the following Gradle task:
-
-     ./gradlew runTemplateClient
-
-To run the client:
-
-**Via IntelliJ:**
-
-Select the 'Run Template RPC Client'
-run configuration which, by default, connect to PartyA (RPC port 10006). Click the
-Green Arrow to run the client.
-
-**Via the command line:**
-
-Run the following Gradle task:
-
-     ./gradlew runTemplateClient
-     
-Note that the template rPC client won't output anything to the console as no state 
-objects are contained in either PartyA's or PartyB's vault.
-
-## Running the Nodes Across Multiple Machines
-
-See https://docs.corda.net/tutorial-cordapp.html#running-nodes-across-machines.
-
-## Further reading
-
-Tutorials and developer docs for CorDapps and Corda are
-[here](https://docs.corda.net/).
+```
+.
+├── Accounts
+│   ├── supplychain
+│   ├── tictacthor
+│   └── worldcupticketbooking
+├── Advanced
+│   ├── auction-cordapp
+│   ├── negotiation-cordapp
+│   └── obligation-cordapp
+├── Basic
+│   ├── cordapp-example
+│   ├── flow-database-access
+│   ├── flow-http-access
+│   ├── flow-send-msg
+│   ├── ping-pong
+│   ├── rpc-nodeinfo
+│   ├── spring-webserver
+│   └── yo-cordapp
+├── Features
+│   ├── attachment-blacklist
+│   ├── attachment-sendfile
+│   ├── confidentialIdentity-whistleblower
+│   ├── cordaService-autopayroll
+│   ├── observableStates-tradereporting
+│   ├── oracle-primenumber
+│   ├── queryableState-carinsurance
+│   ├── referenceStates-sanctionsBody
+│   └── schedulableState-heartbeat
+└── Tokens
+    ├── bikemarket
+    ├── dollartohousetoken
+    ├── fungiblehousetoken
+    ├── stockpaydivident
+    └── spaceships-JavaAPIs
+```
