@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.corda:corda-finance-workflows:4.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.corda/corda-finance-workflows/4.8/326f2fac5aeb1a0778ff58bc5851519e18b233f/corda-finance-workflows-4.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.corda/corda-finance-workflows/4.8/a6e67c23998a801177b4870fc56d2d6216468a75/corda-finance-workflows-4.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

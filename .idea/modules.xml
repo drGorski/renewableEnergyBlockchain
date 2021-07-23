@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp.iml" group="cordapp" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states.iml" group="cordapp-contracts-states" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_main.iml" group="cordapp-contracts-states" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-contracts-states/cordapp-contracts-states_test.iml" group="cordapp-contracts-states" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_integrationTest.iml" group="cordapp" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_main.iml" group="cordapp" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp/cordapp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp/cordapp_test.iml" group="cordapp" />
-      <module fileurl="file://$PROJECT_DIR$/eneryb-bc-iot-poc.iml" filepath="$PROJECT_DIR$/eneryb-bc-iot-poc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_integrationTest.iml" group="eneryb-bc-iot-poc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_main.iml" group="eneryb-bc-iot-poc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eneryb-bc-iot-poc_test.iml" group="eneryb-bc-iot-poc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/renewableEnergyBlockchain.iml" filepath="$PROJECT_DIR$/.idea/modules/renewableEnergyBlockchain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/renewableEnergyBlockchain.clients.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/renewableEnergyBlockchain.clients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/renewableEnergyBlockchain.clients.main.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/renewableEnergyBlockchain.clients.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/renewableEnergyBlockchain.clients.test.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/renewableEnergyBlockchain.clients.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/renewableEnergyBlockchain.contracts.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/renewableEnergyBlockchain.contracts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/renewableEnergyBlockchain.contracts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/renewableEnergyBlockchain.contracts.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/renewableEnergyBlockchain.contracts.test.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/renewableEnergyBlockchain.contracts.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/renewableEnergyBlockchain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/renewableEnergyBlockchain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/renewableEnergyBlockchain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/renewableEnergyBlockchain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.integrationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/renewableEnergyBlockchain.workflows.test.iml" />
     </modules>
   </component>
 </project>
