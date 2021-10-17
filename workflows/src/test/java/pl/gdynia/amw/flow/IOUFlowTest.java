@@ -1,4 +1,4 @@
-package pl.gdynia.amw.flows;
+package pl.gdynia.amw.flow;
 
 import com.google.common.collect.ImmutableList;
 import net.corda.core.concurrent.CordaFuture;
@@ -16,6 +16,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
+import pl.gdynia.amw.flows.IOUFlow;
 import pl.gdynia.amw.states.IOUState;
 
 import java.util.List;

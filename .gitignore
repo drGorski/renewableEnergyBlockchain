@@ -27,3 +27,5 @@ hs_err_pid*
 /.idea/
 /build/
 /logs/
+/contracts/build/
+/workflows/build/

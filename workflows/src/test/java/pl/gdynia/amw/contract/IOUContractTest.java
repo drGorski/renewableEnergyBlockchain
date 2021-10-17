@@ -1,17 +1,18 @@
-package pl.gdynia.amw.contracts;
+package pl.gdynia.amw.contract;
 
 import com.google.common.collect.ImmutableList;
 import net.corda.core.identity.CordaX500Name;
 import net.corda.testing.core.TestIdentity;
 import net.corda.testing.node.MockServices;
 import org.junit.Test;
+import pl.gdynia.amw.contracts.IOUContract;
 import pl.gdynia.amw.states.IOUState;
 
 import static java.util.Arrays.asList;
 import static net.corda.testing.node.NodeTestUtils.ledger;
 
 public class IOUContractTest {
-    static private final MockServices ledgerServices = new MockServices(asList("pl.gdynia.amw.contract", "pl.gdynia.amw.flow"));
+    static private final MockServices ledgerServices = new MockServices(asList("pl.gdynia.amw.contracts", "pl.gdynia.amw.flows"));
     static private final TestIdentity gdyniaA = new TestIdentity(new CordaX500Name("TestA", "Gdynia", "PL"));
     static private final TestIdentity gdyniaB = new TestIdentity(new CordaX500Name("TestB", "Gdynia", "PL"));
     static private final int iouValue = 1;
