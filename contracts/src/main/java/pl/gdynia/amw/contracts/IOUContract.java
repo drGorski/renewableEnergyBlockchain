@@ -16,13 +16,15 @@ public class IOUContract extends VRContract {
         super();
     }
 
-    public void setRules() {
+    @Override
+    protected void setRules() {
         rules = Arrays.asList(
                 new NoInputVRule(),
                 new OneOutputVRule(),
                 new NonNegativeValueVRule(),
                 new DifferentSellerAndBuyerVRule(),
                 new TwoSignersVRule(),
-                new ProducersAndBuyersAsSignersVRule());
+                new ProducersAndBuyersAsSignersVRule()
+            );
     }
 }

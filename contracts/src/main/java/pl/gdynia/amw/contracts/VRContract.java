@@ -15,7 +15,7 @@ abstract public class VRContract implements Contract {
 
     protected List<VRule> rules = new ArrayList<>();
 
-    public VRContract() {
+    protected VRContract() {
         setRules();
     }
 
