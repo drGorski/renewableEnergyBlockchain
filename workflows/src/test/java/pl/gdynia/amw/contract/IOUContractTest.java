@@ -7,6 +7,7 @@ import net.corda.testing.node.MockServices;
 import org.junit.Test;
 import pl.gdynia.amw.contracts.IOUContract;
 import pl.gdynia.amw.states.IOUState;
+import pl.gdynia.amw.vrules.impl.*;
 
 import static java.util.Arrays.asList;
 import static net.corda.testing.node.NodeTestUtils.ledger;
@@ -32,13 +33,13 @@ public class IOUContractTest {
     }
 
     @Test
-    public void transactionMustHaveNoInputs() {
+    public void transactionMustHaveNoInputs_fails() {
         ledger(ledgerServices, (ledger -> {
             ledger.transaction(tx -> {
                 tx.input(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
                 tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
                 tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
-                tx.failsWith("No inputs should be consumed when issuing an IOU.");
+                tx.failsWith(new NoInputVRule().errorMsg());
                 return null;
             });
             return null;
@@ -46,13 +47,26 @@ public class IOUContractTest {
     }
 
     @Test
-    public void transactionMustHaveOneOutput() {
+    public void transactionMustHaveNoInputs_pass() {
+        ledger(ledgerServices, (ledger -> {
+            ledger.transaction(tx -> {
+                tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
+                tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
+                tx.verifies();
+                return null;
+            });
+            return null;
+        }));
+    }
+
+    @Test
+    public void transactionMustHaveOneOutput_fails() {
         ledger(ledgerServices, (ledger -> {
             ledger.transaction(tx -> {
                 tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
                 tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
                 tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
-                tx.failsWith("Only one output state should be created.");
+                tx.failsWith(new OneOutputVRule().errorMsg());
                 return null;
             });
             return null;
@@ -60,12 +74,12 @@ public class IOUContractTest {
     }
 
     @Test
-    public void lenderMustSignTransaction() {
+    public void transactionMustHaveOneOutput_pass() {
         ledger(ledgerServices, (ledger -> {
             ledger.transaction(tx -> {
                 tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
-                tx.command(gdyniaB.getPublicKey(), new IOUContract.Commands.Create());
-                tx.failsWith("All of the participants must be signers.");
+                tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
+                tx.verifies();
                 return null;
             });
             return null;
@@ -73,12 +87,38 @@ public class IOUContractTest {
     }
 
     @Test
-    public void borrowerMustSignTransaction() {
+    public void producerAndBuyerSignsTransaction_fails() {
+        ledger(ledgerServices, (ledger -> {
+            ledger.transaction(tx -> {
+                tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
+                tx.command(ImmutableList.of(gdyniaB.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
+                tx.failsWith(new ProducersAndBuyersAsSignersVRule().errorMsg());
+                return null;
+            });
+            return null;
+        }));
+    }
+
+    @Test
+    public void producerAndBuyerSignsTransaction_pass() {
+        ledger(ledgerServices, (ledger -> {
+            ledger.transaction(tx -> {
+                tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
+                tx.command(ImmutableList.of(gdyniaB.getPublicKey(), gdyniaA.getPublicKey()), new IOUContract.Commands.Create());
+                tx.verifies();
+                return null;
+            });
+            return null;
+        }));
+    }
+
+    @Test
+    public void twoSigners_fails() {
         ledger(ledgerServices, (ledger -> {
             ledger.transaction(tx -> {
                 tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
                 tx.command(gdyniaA.getPublicKey(), new IOUContract.Commands.Create());
-                tx.failsWith("All of the participants must be signers.");
+                tx.failsWith(new TwoSignersVRule().errorMsg());
                 return null;
             });
             return null;
@@ -86,13 +126,40 @@ public class IOUContractTest {
     }
 
     @Test
-    public void lenderIsNotBorrower() {
+    public void twoSigners_pass() {
+        ledger(ledgerServices, (ledger -> {
+            ledger.transaction(tx -> {
+                tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
+                tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
+                tx.verifies();
+                return null;
+            });
+            return null;
+        }));
+    }
+
+    @Test
+    public void producerIsNotBuyer_fails() {
+        final TestIdentity testIdentity = new TestIdentity(gdyniaA.getName(), gdyniaA.getKeyPair());
+        ledger(ledgerServices, (ledger -> {
+            ledger.transaction(tx -> {
+                tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaA.getParty(), testIdentity.getParty()));
+                tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaA.getPublicKey()), new IOUContract.Commands.Create());
+                tx.failsWith(new DifferentSellerAndBuyerVRule().errorMsg());
+                return null;
+            });
+            return null;
+        }));
+    }
+
+    @Test
+    public void producerIsNotBuyer_pass() {
         final TestIdentity testIdentity = new TestIdentity(gdyniaA.getName(), gdyniaA.getKeyPair());
         ledger(ledgerServices, (ledger -> {
             ledger.transaction(tx -> {
                 tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), testIdentity.getParty()));
                 tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
-                tx.failsWith("The lender and the borrower cannot be the same entity.");
+                tx.verifies();
                 return null;
             });
             return null;
@@ -100,12 +167,24 @@ public class IOUContractTest {
     }
 
     @Test
-    public void cannotCreateNegativeValueIOUs() {
+    public void negativeValue_fails() {
         ledger(ledgerServices, (ledger -> {
             ledger.transaction(tx -> {
                 tx.output(IOUContract.ID, new IOUState(-1, gdyniaB.getParty(), gdyniaA.getParty()));
                 tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
-                tx.failsWith("The IOU's value must be non-negative.");
+                tx.failsWith(new NonNegativeValueVRule().errorMsg());
+                return null;
+            });
+            return null;
+        }));
+    }
+
+    @Test
+    public void negativeValue_pass() {
+        ledger(ledgerServices, (ledger -> {
+            ledger.transaction(tx -> {
+                tx.output(IOUContract.ID, new IOUState(1, gdyniaB.getParty(), gdyniaA.getParty()));
+                tx.verifies();
                 return null;
             });
             return null;

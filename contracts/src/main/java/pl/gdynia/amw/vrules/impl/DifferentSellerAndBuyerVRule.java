@@ -15,7 +15,7 @@ public class DifferentSellerAndBuyerVRule implements VRule {
         final IOUState out = tx.outputsOfType(IOUState.class).get(0);
         final Party producer = out.getProducer();
         final Party buyer = out.getBuyer();
-        return producer != buyer;
+        return !producer.getName().equals(buyer.getName());
     }
 
     @Override

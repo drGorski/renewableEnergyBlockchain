@@ -23,7 +23,7 @@ public class ProducersAndBuyersAsSignersVRule implements VRule {
         final Party producer = out.getProducer();
         final Party buyer = out.getBuyer();
 
-        final CommandWithParties<VRContract.Create> command = requireSingleCommand(tx.getCommands(), VRContract.Create.class);
+        final CommandWithParties<VRContract.Commands.Create> command = requireSingleCommand(tx.getCommands(), VRContract.Commands.Create.class);
         final List<PublicKey> signers = command.getSigners();
         return signers.containsAll(
                 Arrays.asList(producer.getOwningKey(), buyer.getOwningKey()));

@@ -16,7 +16,7 @@ public class TwoSignersVRule implements VRule {
 
     @Override
     public boolean runRule(LedgerTransaction tx) {
-        final CommandWithParties<VRContract.Create> command = requireSingleCommand(tx.getCommands(), VRContract.Create.class);
+        final CommandWithParties<VRContract.Commands.Create> command = requireSingleCommand(tx.getCommands(), VRContract.Commands.Create.class);
         final List<PublicKey > signers = command.getSigners();
         return signers.size() == 2;
     }

@@ -11,12 +11,6 @@ public class IOUContract extends VRContract implements Contract {
 
     public static final String ID = "pl.gdynia.amw.contracts.IOUContract";
 
-    private Collection<VRule> rules;
-
-    public IOUContract() {
-        super();
-    }
-
     @Override
     protected void setRules() {
         rules = Arrays.asList(
