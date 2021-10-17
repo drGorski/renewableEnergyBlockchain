@@ -1,9 +1,9 @@
 package pl.gdynia.amw.contracts;
 
+import com.sun.istack.NotNull;
 import net.corda.core.contracts.CommandData;
 import net.corda.core.contracts.Contract;
 import net.corda.core.transactions.LedgerTransaction;
-import org.jetbrains.annotations.NotNull;
 import pl.gdynia.amw.vrules.VRule;
 
 import java.util.ArrayList;
@@ -34,6 +34,6 @@ abstract public class VRContract implements Contract {
     }
 
     public interface Commands extends CommandData {
-        class Action implements Commands {}
+        class Create implements Commands {}
     }
 }
