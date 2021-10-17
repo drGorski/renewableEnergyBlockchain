@@ -183,11 +183,13 @@ public class IOUContractTest {
     public void negativeValue_pass() {
         ledger(ledgerServices, (ledger -> {
             ledger.transaction(tx -> {
-                tx.output(IOUContract.ID, new IOUState(1, gdyniaB.getParty(), gdyniaA.getParty()));
+                tx.output(IOUContract.ID, new IOUState(iouValue, gdyniaB.getParty(), gdyniaA.getParty()));
+                tx.command(ImmutableList.of(gdyniaA.getPublicKey(), gdyniaB.getPublicKey()), new IOUContract.Commands.Create());
                 tx.verifies();
                 return null;
             });
             return null;
         }));
     }
+
 }
