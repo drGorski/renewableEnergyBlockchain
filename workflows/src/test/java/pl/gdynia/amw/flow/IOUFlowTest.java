@@ -38,7 +38,7 @@ public class IOUFlowTest {
         b = network.createPartyNode(null);
         // For real nodes this happens automatically, but we have to manually register the flow for tests.
         for (StartedMockNode node : ImmutableList.of(a, b)) {
-            node.registerInitiatedFlow(IOUFlow.Initiator.class);
+            node.registerInitiatedFlow(IOUFlow.Acceptor.class);
         }
         network.runNetwork();
     }
