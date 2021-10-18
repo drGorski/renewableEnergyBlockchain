@@ -14,7 +14,7 @@ import net.corda.testing.node.TestCordapp;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pl.gdynia.amw.flows.IOUFlow;
 import pl.gdynia.amw.states.IOUState;
@@ -38,7 +38,7 @@ public class IOUFlowTest {
         b = network.createPartyNode(null);
         // For real nodes this happens automatically, but we have to manually register the flow for tests.
         for (StartedMockNode node : ImmutableList.of(a, b)) {
-            node.registerInitiatedFlow(IOUFlow.Acceptor.class);
+            node.registerInitiatedFlow(IOUFlow.Initiator.class);
         }
         network.runNetwork();
     }

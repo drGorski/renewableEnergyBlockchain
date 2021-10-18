@@ -41,7 +41,7 @@ public class DriverBasedTest {
     private final TestIdentity nodeB = new TestIdentity(new CordaX500Name("TestB", "Gdynia", "PL"));
 
 
-    /*@Test
+    @Test
     public void nodesSellAndBuyEnergy() {
         // START 1
         driver(new DriverParameters()
@@ -126,6 +126,6 @@ public class DriverBasedTest {
             }
             return null;
         });
-    }*/
+    }
 
 }
