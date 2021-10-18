@@ -29,7 +29,7 @@ public class IOUFlowTest {
     private StartedMockNode a;
     private StartedMockNode b;
 
-    @Before
+    /*@Before
     public void setup() {
         network = new MockNetwork(new MockNetworkParameters().withCordappsForAllNodes(ImmutableList.of(
                 TestCordapp.findCordapp("pl.gdynia.amw.contracts"),
@@ -137,5 +137,5 @@ public class IOUFlowTest {
                 return null;
             });
         }
-    }
+    }*/
 }

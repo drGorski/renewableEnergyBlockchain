@@ -134,7 +134,7 @@ While the sole template endpoint is served on:
 
 You should extend this template as follows:
 
-* Add your own state and contract definitions under `contracts/src/main/java/`
+* Add your own state and pl.gdynia.amw.contract definitions under `contracts/src/main/java/`
 * Add your own flow definitions under `workflows/src/main/java/`
 * Extend or replace the client and webserver under `clients/src/main/java/`
 

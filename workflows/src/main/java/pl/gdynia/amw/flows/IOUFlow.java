@@ -28,7 +28,7 @@ public class IOUFlow {
         private final Party otherParty;
 
         private final ProgressTracker.Step GENERATING_TRANSACTION = new ProgressTracker.Step("Generating transaction based on new IOU.");
-        private final ProgressTracker.Step VERIFYING_TRANSACTION = new ProgressTracker.Step("Verifying contract constraints.");
+        private final ProgressTracker.Step VERIFYING_TRANSACTION = new ProgressTracker.Step("Verifying pl.gdynia.amw.contract constraints.");
         private final ProgressTracker.Step SIGNING_TRANSACTION = new ProgressTracker.Step("Signing transaction with our private key.");
         private final ProgressTracker.Step GATHERING_SIGS = new ProgressTracker.Step("Gathering the counterparty's signature.") {
             @Override
