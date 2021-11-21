@@ -68,7 +68,7 @@ public class DriverBasedTest {
                 // END 1
 
                 // START 2
-                /*CordaRPCClient test1Client = new CordaRPCClient(test1.getRpcAddress());
+                CordaRPCClient test1Client = new CordaRPCClient(test1.getRpcAddress());
                 CordaRPCOps test1Proxy = test1Client.start("testUser1", "testPassword1").getProxy();
 
                 CordaRPCClient test2Client = new CordaRPCClient(test2.getRpcAddress());
@@ -76,7 +76,7 @@ public class DriverBasedTest {
                 // END 2
 
                 // START 3
-                Observable<Vault.Update<Cash.State>> bobVaultUpdates = test2Proxy.vaultTrack(Cash.State.class).getUpdates();
+                /*Observable<Vault.Update<Cash.State>> bobVaultUpdates = test2Proxy.vaultTrack(Cash.State.class).getUpdates();
                 Observable<Vault.Update<Cash.State>> aliceVaultUpdates = test1Proxy.vaultTrack(Cash.State.class).getUpdates();
                 // END 3
 
