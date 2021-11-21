@@ -85,10 +85,7 @@ public class DriverBasedTest {
                 test1Proxy.startFlowDynamic(
                         IOUFlow.Initiator.class,
                         NumberUtils.INTEGER_ONE,
-                        issueRef,
-                        test2.getNodeInfo().getLegalIdentities().get(0),
-                        true,
-                        dsl.getDefaultNotaryIdentity()
+                        nodeB.getParty()
                 ).getReturnValue().get();
 
                 @SuppressWarnings("unchecked")
