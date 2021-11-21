@@ -127,5 +127,9 @@ While the sole template endpoint is served on:
     
 # Extending the CorDapp
 
-For a guided example of how to extend this template, see the Hello, World! tutorial 
+For a guided example of how to extend CorDapp template, see the Hello, World! tutorial 
 [here](https://docs.corda.net/hello-world-introduction.html).
+
+# Implementation
+
+### Energy selling/buying workflow
