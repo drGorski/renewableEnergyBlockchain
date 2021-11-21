@@ -85,7 +85,7 @@ public class DriverBasedTest {
                 test1Proxy.startFlowDynamic(
                         IOUFlow.Initiator.class,
                         NumberUtils.INTEGER_ONE,
-                        nodeB.getParty()
+                        test1.getNodeInfo().getLegalIdentities().get(0)
                 ).getReturnValue().get();
 
                 @SuppressWarnings("unchecked")
