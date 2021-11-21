@@ -9,6 +9,7 @@ import net.corda.core.contracts.Structures;
 import net.corda.core.identity.CordaX500Name;
 import net.corda.core.messaging.CordaRPCOps;
 import net.corda.core.node.services.Vault;
+import net.corda.core.transactions.SignedTransaction;
 import net.corda.core.utilities.OpaqueBytes;
 import net.corda.finance.contracts.asset.Cash;
 import net.corda.testing.core.TestIdentity;
@@ -19,15 +20,14 @@ import net.corda.testing.node.User;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.junit.Test;
 import pl.gdynia.amw.flows.IOUFlow;
+import pl.gdynia.amw.states.IOUState;
 import rx.Observable;
 
-import java.util.Currency;
 import java.util.HashSet;
 import java.util.List;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
-import static net.corda.finance.Currencies.DOLLARS;
 import static net.corda.node.services.Permissions.invokeRpc;
 import static net.corda.node.services.Permissions.startFlow;
 import static net.corda.testing.core.ExpectKt.expect;
@@ -76,46 +76,45 @@ public class DriverBasedTest {
                 // END 2
 
                 // START 3
-                Observable<Vault.Update<Cash.State>> bobVaultUpdates = test2Proxy.vaultTrack(Cash.State.class).getUpdates();
-                Observable<Vault.Update<Cash.State>> aliceVaultUpdates = test1Proxy.vaultTrack(Cash.State.class).getUpdates();
+                Observable<Vault.Update<IOUState>> test2Updates = test2Proxy.vaultTrack(IOUState.class).getUpdates();
+                Observable<Vault.Update<IOUState>> test1Updates = test1Proxy.vaultTrack(IOUState.class).getUpdates();
                 // END 3
 
                 // START 4
-                OpaqueBytes issueRef = OpaqueBytes.of((byte)0);
-                test1Proxy.startFlowDynamic(
+                SignedTransaction signedTransaction = test1Proxy.startFlowDynamic(
                         IOUFlow.Initiator.class,
                         NumberUtils.INTEGER_ONE,
                         test2.getNodeInfo().getLegalIdentities().get(0)
                 ).getReturnValue().get();
 
                 @SuppressWarnings("unchecked")
-                Class<Vault.Update<Cash.State>> cashVaultUpdateClass = (Class<Vault.Update<Cash.State>>)(Class<?>)Vault.Update.class;
+                Class<Vault.Update<IOUState>> valueVaultUpdateClass = (Class<Vault.Update<IOUState>>)(Class<?>)Vault.Update.class;
 
-                expectEvents(bobVaultUpdates, true, () ->
-                        expect(cashVaultUpdateClass, update -> true, update -> {
-                            System.out.println("Bob got vault update of " + update);
-                            Amount<Issued<Currency>> amount = update.getProduced().iterator().next().getState().getData().getAmount();
-                            assertEquals(DOLLARS(1000), Structures.withoutIssuer(amount));
+                expectEvents(test2Updates, true, () ->
+                        expect(valueVaultUpdateClass, update -> true, update -> {
+                            System.out.println("Test2 got vault update of " + update);
+                            Integer value = update.getProduced().iterator().next().getState().getData().getValue();
+                            assertEquals(NumberUtils.INTEGER_ONE, value);
                             return null;
                         })
                 );
                 // END 4
 
                 // START 5
-                /*test2Proxy.startFlowDynamic(
+                test2Proxy.startFlowDynamic(
                         IOUFlow.Initiator.class,
                         NumberUtils.INTEGER_ONE,
                         test1.getNodeInfo().getLegalIdentities().get(0)
                 ).getReturnValue().get();
 
-                expectEvents(aliceVaultUpdates, true, () ->
-                        expect(cashVaultUpdateClass, update -> true, update -> {
-                            System.out.println("Alice got vault update of " + update);
-                            Amount<Issued<Currency>> amount = update.getProduced().iterator().next().getState().getData().getAmount();
-                            assertEquals(DOLLARS(1000), Structures.withoutIssuer(amount));
+                expectEvents(test1Updates, true, () ->
+                        expect(valueVaultUpdateClass, update -> true, update -> {
+                            System.out.println("Test1 got vault update of " + update);
+                            Integer value = update.getProduced().iterator().next().getState().getData().getValue();
+                            assertEquals(NumberUtils.INTEGER_ONE, value);
                             return null;
                         })
-                );*/
+                );
                 // END 5
             } catch (Exception e) {
                 throw new RuntimeException("Exception thrown in driver DSL", e);
