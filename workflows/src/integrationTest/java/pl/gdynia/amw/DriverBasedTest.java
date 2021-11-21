@@ -76,12 +76,12 @@ public class DriverBasedTest {
                 // END 2
 
                 // START 3
-                /*Observable<Vault.Update<Cash.State>> bobVaultUpdates = test2Proxy.vaultTrack(Cash.State.class).getUpdates();
+                Observable<Vault.Update<Cash.State>> bobVaultUpdates = test2Proxy.vaultTrack(Cash.State.class).getUpdates();
                 Observable<Vault.Update<Cash.State>> aliceVaultUpdates = test1Proxy.vaultTrack(Cash.State.class).getUpdates();
                 // END 3
 
                 // START 4
-                OpaqueBytes issueRef = OpaqueBytes.of((byte)0);
+                /*OpaqueBytes issueRef = OpaqueBytes.of((byte)0);
                 test1Proxy.startFlowDynamic(
                         IOUFlow.Initiator.class,
                         NumberUtils.INTEGER_ONE,
