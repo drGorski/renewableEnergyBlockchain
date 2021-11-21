@@ -81,7 +81,7 @@ public class DriverBasedTest {
                 // END 3
 
                 // START 4
-                /*OpaqueBytes issueRef = OpaqueBytes.of((byte)0);
+                OpaqueBytes issueRef = OpaqueBytes.of((byte)0);
                 test1Proxy.startFlowDynamic(
                         IOUFlow.Initiator.class,
                         NumberUtils.INTEGER_ONE,
@@ -105,7 +105,7 @@ public class DriverBasedTest {
                 // END 4
 
                 // START 5
-                test2Proxy.startFlowDynamic(
+                /*test2Proxy.startFlowDynamic(
                         IOUFlow.Initiator.class,
                         NumberUtils.INTEGER_ONE,
                         test1.getNodeInfo().getLegalIdentities().get(0)
