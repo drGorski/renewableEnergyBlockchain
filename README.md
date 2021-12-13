@@ -3,7 +3,7 @@
 </p>
 
 # CorDapp ECSM
-proudly developed based on [CorDapp template](https://ide.corda.net/?folder=/home/coder/cordapp-template-java)
+Developed based on [CorDapp template](https://ide.corda.net/?folder=/home/coder/cordapp-template-java)
 
 # Pre-Requisites
 
